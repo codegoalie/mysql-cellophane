@@ -1,6 +1,6 @@
 # MySQL-cellophane is a very thin wrapper around the Mysql Ruby implementation
 # MySQc provides an API interface for those famaliar with SQL 
-# and wishes to have more fine grained control over their
+# and wish to have more fine grained control over their
 # queries, but don't want to write each query manually.
 #
 # Author:: Chris Marshall (mailto:chris@chrismar035.com)
