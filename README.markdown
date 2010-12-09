@@ -5,6 +5,8 @@ are tired of the annoyances of writing each query each time. MySQL-Cellophane he
 abstracting away some of the repetative query building process. One of the main features 
 is to allow complete control over your queries.
 
+Requires mysql.rb (included in public folder above or from http://www.tmtm.org/en/ruby/mysql/)
+
 Getting Started
 ---------------
 
@@ -57,7 +59,7 @@ the class attributes listed above. See the examples below for more information.
   
   performs a delete query
 
-***
+------
 
 ### Examples
 #### friends table
