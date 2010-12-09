@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: MySQLc</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./mysql-cellophane_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="mysql-cellophane.rb">mysql-cellophane.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-build_query">#build_query</a></li>
+					
+					<li><a href="#method-i-connect">#connect</a></li>
+					
+					<li><a href="#method-i-count">#count</a></li>
+					
+					<li><a href="#method-i-delete">#delete</a></li>
+					
+					<li><a href="#method-i-esc">#esc</a></li>
+					
+					<li><a href="#method-i-execute">#execute</a></li>
+					
+					<li><a href="#method-i-extract_fields_from">#extract_fields_from</a></li>
+					
+					<li><a href="#method-i-extract_values_from">#extract_values_from</a></li>
+					
+					<li><a href="#method-i-insert">#insert</a></li>
+					
+					<li><a href="#method-i-inserted_id">#inserted_id</a></li>
+					
+					<li><a href="#method-i-quoted_string_from">#quoted_string_from</a></li>
+					
+					<li><a href="#method-i-select">#select</a></li>
+					
+					<li><a href="#method-i-set_attributes">#set_attributes</a></li>
+					
+					<li><a href="#method-i-update">#update</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./MySQLc.html">MySQLc</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">MySQLc</h1>
+
+		<div id="description">
+			<p>
+MySQL-cellophane is a very thin wrapper around the Mysql Ruby
+implementation MySQc provides an API interface for those famaliar with SQL 
+and wishes to have more fine grained control over their queries, but
+don&#8217;t want to write each query manually.
+</p>
+<table>
+<tr><td valign="top">Author</td><td><p>
+Chris Marshall (<a
+href="mailto:chris@chrismar035.com">chris@chrismar035.com</a>)
+</p>
+</td></tr>
+</table>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="table-attribute-method" class="method-detail">
+				<a name="table"></a>
+				
+				<a name="table="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">table</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="field-list-attribute-method" class="method-detail">
+				<a name="field_list"></a>
+				
+				<a name="field_list="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">field_list</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="id-field-attribute-method" class="method-detail">
+				<a name="id_field"></a>
+				
+				<a name="id_field="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">id_field</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="id-attribute-method" class="method-detail">
+				<a name="id"></a>
+				
+				<a name="id="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">id</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="extra-cond-attribute-method" class="method-detail">
+				<a name="extra_cond"></a>
+				
+				<a name="extra_cond="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">extra_cond</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="result-attribute-method" class="method-detail">
+				<a name="result"></a>
+				
+				<a name="result="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">result</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="query-attribute-method" class="method-detail">
+				<a name="query"></a>
+				
+				<a name="query="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">query</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(options = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+initializes common instance variables.
+</p>
+<p>
+can setup connection, but does not create connection
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 20</span>
+20:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">options</span> = {})
+21:     <span class="ruby-identifier">log</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">'sql_log.log'</span>, <span class="ruby-value str">'a'</span>)
+22:     <span class="ruby-identifier">log</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Created New MySQLc instance&quot;</span>
+23:     <span class="ruby-identifier">log</span>.<span class="ruby-identifier">close</span>
+24: 
+25:     <span class="ruby-identifier">options</span>[<span class="ruby-value">:host</span>]      <span class="ruby-operator">||=</span> <span class="ruby-value str">'localhost'</span>
+26:     <span class="ruby-identifier">options</span>[<span class="ruby-value">:user</span>]      <span class="ruby-operator">||=</span> <span class="ruby-value str">'root'</span>
+27:     <span class="ruby-identifier">options</span>[<span class="ruby-value">:password</span>]  <span class="ruby-operator">||=</span> <span class="ruby-value str">'secure'</span>
+28:     <span class="ruby-identifier">options</span>[<span class="ruby-value">:database</span>]  <span class="ruby-operator">||=</span> <span class="ruby-value str">'test'</span>
+29:     <span class="ruby-identifier">options</span>[<span class="ruby-value">:port</span>]      <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">nil</span>
+30:     <span class="ruby-identifier">options</span>[<span class="ruby-value">:socket</span>]    <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">nil</span>
+31:     <span class="ruby-identifier">options</span>[<span class="ruby-value">:flag</span>]      <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">nil</span>
+32: 
+33:     <span class="ruby-ivar">@options</span> = {}
+34:     <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">options</span>)
+35: 
+36:     <span class="ruby-ivar">@field_list</span> = <span class="ruby-value str">&quot;*&quot;</span>
+37:     <span class="ruby-ivar">@id_field</span>   = <span class="ruby-value">1</span>
+38:     <span class="ruby-ivar">@id</span>         = <span class="ruby-value">1</span>
+39:     <span class="ruby-ivar">@cache</span>      = {}
+40:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="build-query-method" class="method-detail ">
+				<a name="method-i-build_query"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">build_query</span><span
+						class="method-args">(update = false)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates the internal query string for  processing. Shouldn&#8217;t ever
+NEED to be used externally.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="build-query-source">
+<pre>
+    <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 87</span>
+87:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">build_query</span>(<span class="ruby-identifier">update</span> = <span class="ruby-keyword kw">false</span>)
+88:     <span class="ruby-ivar">@query</span> = <span class="ruby-value str">&quot;&quot;</span>
+89:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@id_field</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;&quot;</span>
+90:       <span class="ruby-ivar">@query</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;WHERE #{esc @id_field} = '#{esc @id}'&quot;</span>
+91:     <span class="ruby-keyword kw">end</span>
+92: 
+93:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@extra_cond</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@extra_cond</span>.<span class="ruby-identifier">nil?</span>
+94:       <span class="ruby-ivar">@query</span> <span class="ruby-operator">+=</span> ((<span class="ruby-ivar">@query</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;&quot;</span>) <span class="ruby-operator">?</span> <span class="ruby-value str">&quot; WHERE &quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot; AND &quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-ivar">@extra_cond</span>
+95:     <span class="ruby-keyword kw">end</span>
+96: 
+97:     <span class="ruby-ivar">@query</span> = <span class="ruby-node">&quot;SELECT #{field_list} FROM #{@table} #{@query}&quot;</span>
+98:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="connect-method" class="method-detail ">
+				<a name="method-i-connect"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">connect</span><span
+						class="method-args">(options = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+takes hash of connection ooptions, has default also sets @db as Mysql
+instance
+</p>
+<p>
+as separate method for lazy connection
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="connect-source">
+<pre>
+    <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 46</span>
+46:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">connect</span>(<span class="ruby-identifier">options</span> = {})
+47:     <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">options</span>)
+48: 
+49:     <span class="ruby-ivar">@db</span> = <span class="ruby-constant">Mysql</span>.<span class="ruby-identifier">connect</span>(<span class="ruby-ivar">@options</span>[<span class="ruby-value">:host</span>], <span class="ruby-ivar">@options</span>[<span class="ruby-value">:user</span>], <span class="ruby-ivar">@options</span>[<span class="ruby-value">:password</span>], <span class="ruby-ivar">@options</span>[<span class="ruby-value">:database</span>],
+50:                          <span class="ruby-ivar">@options</span>[<span class="ruby-value">:port</span>], <span class="ruby-ivar">@options</span>[<span class="ruby-value">:socket</span>], <span class="ruby-ivar">@options</span>[<span class="ruby-value">:flag</span>])
+51:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="count-method" class="method-detail ">
+				<a name="method-i-count"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">count</span><span
+						class="method-args">(*vals)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+returns an integer of the totals returned by query
+</p>
+<p>
+takes an optional last parameter of a hash. This hash has symbol keys of
+any/all of the following: table, <a
+href="MySQLc.html#field_list">field_list</a>, <a
+href="MySQLc.html#id_field">id_field</a>, id, <a
+href="MySQLc.html#extra_cond">extra_cond</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="count-source">
+<pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 215</span>
+215:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">count</span>(*<span class="ruby-identifier">vals</span>)
+216:     <span class="ruby-identifier">set_attributes</span> <span class="ruby-identifier">vals</span>
+217: 
+218:     <span class="ruby-identifier">result</span> = <span class="ruby-identifier">execute</span>
+219:     <span class="ruby-identifier">result</span>.<span class="ruby-identifier">num_rows</span>
+220:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="delete-method" class="method-detail ">
+				<a name="method-i-delete"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">delete</span><span
+						class="method-args">(*vals)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+deletes row(s) matching the instalce variables&#8217; criteria
+</p>
+<p>
+takes an optional last parameter of a hash. This hash has symbol keys of
+any/all of the following: table, <a
+href="MySQLc.html#field_list">field_list</a>, <a
+href="MySQLc.html#id_field">id_field</a>, id, <a
+href="MySQLc.html#extra_cond">extra_cond</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="delete-source">
+<pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 194</span>
+194:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">delete</span>(*<span class="ruby-identifier">vals</span>)
+195:     <span class="ruby-identifier">set_attributes</span> <span class="ruby-identifier">vals</span>
+196: 
+197:     <span class="ruby-ivar">@query</span> = <span class="ruby-value str">&quot;&quot;</span>
+198:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@id_field</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;&quot;</span>
+199:       <span class="ruby-ivar">@query</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;WHERE #{esc @id_field} = '#{esc @id}'&quot;</span>
+200:     <span class="ruby-keyword kw">end</span>
+201: 
+202:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@extra_cond</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@extra_cond</span>.<span class="ruby-identifier">nil?</span>
+203:       <span class="ruby-ivar">@query</span> <span class="ruby-operator">+=</span> ((<span class="ruby-ivar">@query</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;&quot;</span>) <span class="ruby-operator">?</span> <span class="ruby-value str">&quot; WHERE &quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot; AND &quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-ivar">@extra_cond</span>
+204:     <span class="ruby-keyword kw">end</span>
+205: 
+206:     <span class="ruby-ivar">@query</span> = <span class="ruby-node">&quot;DELETE FROM #{@table} #{@query}&quot;</span>
+207:     <span class="ruby-identifier">execute</span>
+208:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="esc-method" class="method-detail ">
+				<a name="method-i-esc"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">esc</span><span
+						class="method-args">(raw_string)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+takes string parameter and  returns saftely escaped string
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="esc-source">
+<pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 254</span>
+254:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">esc</span>(<span class="ruby-identifier">raw_string</span>)
+255:     <span class="ruby-identifier">connect</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-comment cmt">#connect to the database if needs be</span>
+256: 
+257:     <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">quote</span>(<span class="ruby-identifier">raw_string</span>.<span class="ruby-identifier">to_s</span>)
+258:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="execute-method" class="method-detail ">
+				<a name="method-i-execute"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">execute</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+builds query from parts if neccessary
+</p>
+<p>
+returns cached result if exists
+</p>
+<p>
+saves result in @result
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="execute-source">
+<pre>
+    <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 58</span>
+58:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">execute</span>
+59:     <span class="ruby-identifier">log</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">'sql_log.log'</span>, <span class="ruby-value str">'a'</span>)
+60:     <span class="ruby-identifier">log</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Before: #{@query}&quot;</span>
+61:     <span class="ruby-identifier">log</span>.<span class="ruby-identifier">close</span>
+62:     <span class="ruby-identifier">build_query</span> <span class="ruby-keyword kw">if</span>(<span class="ruby-ivar">@query</span>.<span class="ruby-identifier">nil?</span>) 
+63: 
+64:     <span class="ruby-identifier">query</span> = <span class="ruby-ivar">@query</span> <span class="ruby-comment cmt"># keep local copy of query string</span>
+65:     <span class="ruby-ivar">@query</span> = <span class="ruby-keyword kw">nil</span> <span class="ruby-comment cmt">#prevent same queries from running more than once without rebuilding</span>
+66: 
+67:     <span class="ruby-comment cmt">#print &quot;#{query}\n&quot;</span>
+68:     <span class="ruby-comment cmt">#if(@cache[query].nil? &amp;&amp; use_cache)</span>
+69:       <span class="ruby-identifier">connect</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-comment cmt">#connect to the database if needs be</span>
+70: 
+71:       <span class="ruby-identifier">log</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">'sql_log.log'</span>, <span class="ruby-value str">'a'</span>)
+72:       <span class="ruby-identifier">log</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;To Execute: #{query}&quot;</span>
+73:       <span class="ruby-identifier">log</span>.<span class="ruby-identifier">close</span>
+74:       <span class="ruby-ivar">@result</span> = <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">query</span>(<span class="ruby-identifier">query</span>) <span class="ruby-comment cmt"># run query</span>
+75:       <span class="ruby-identifier">log</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">'sql_log.log'</span>, <span class="ruby-value str">'a'</span>)
+76:       <span class="ruby-identifier">log</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;After: #{@query}&quot;</span>
+77:       <span class="ruby-identifier">log</span>.<span class="ruby-identifier">close</span>
+78:       <span class="ruby-ivar">@cache</span>[<span class="ruby-identifier">query</span>] = <span class="ruby-ivar">@result</span> <span class="ruby-comment cmt"># save result to cache hash</span>
+79: 
+80:     <span class="ruby-comment cmt">#else</span>
+81:       <span class="ruby-comment cmt">#@result = @cache[query]</span>
+82:     <span class="ruby-comment cmt">#end</span>
+83:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="extract-fields-from-method" class="method-detail ">
+				<a name="method-i-extract_fields_from"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">extract_fields_from</span><span
+						class="method-args">(hash)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+takes a hash and returns a comma separated list of keys
+</p>
+<pre>
+  { :key1 =&gt; 'val1', :key2 =&gt; 'key2' } #=&gt; &quot;key1, key2&quot;</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="extract-fields-from-source">
+<pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 247</span>
+247:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract_fields_from</span> <span class="ruby-identifier">hash</span>
+248:     <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>)
+249:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="extract-values-from-method" class="method-detail ">
+				<a name="method-i-extract_values_from"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">extract_values_from</span><span
+						class="method-args">(hash)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+takes a hash and returns a songle  quoted string of the values
+</p>
+<pre>
+  
+  { :key =&gt; 'val1', :key2 =&gt; &quot;val'2&quot; }  #=&gt; &quot;'val1','val\'2'&quot;</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="extract-values-from-source">
+<pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 239</span>
+239:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract_values_from</span> <span class="ruby-identifier">hash</span>
+240:     <span class="ruby-identifier">quoted_string_from</span> <span class="ruby-identifier">hash</span>
+241:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="insert-method" class="method-detail ">
+				<a name="method-i-insert"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">insert</span><span
+						class="method-args">(inserts, *vals)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+inserts a new row into the table  from the given hash
+</p>
+<pre>
+ { :column_one_field =&gt; 'column_one_value', 
+ :column_two_field =&gt; 'column_two_value' }
+</pre>
+<p>
+return the newly insertted row&#8217;s ID
+</p>
+<p>
+takes an optional last parameter of a hash. This hash has symbol keys of
+any/all of the following: table, <a
+href="MySQLc.html#field_list">field_list</a>, <a
+href="MySQLc.html#id_field">id_field</a>, id, <a
+href="MySQLc.html#extra_cond">extra_cond</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="insert-source">
+<pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 141</span>
+141:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">insert</span>(<span class="ruby-identifier">inserts</span>, *<span class="ruby-identifier">vals</span>)
+142:     <span class="ruby-identifier">set_attributes</span> <span class="ruby-identifier">vals</span>
+143: 
+144:     <span class="ruby-identifier">fields</span> = <span class="ruby-identifier">extract_fields_from</span> <span class="ruby-identifier">inserts</span> 
+145:     <span class="ruby-identifier">values</span> = <span class="ruby-identifier">extract_values_from</span> <span class="ruby-identifier">inserts</span> 
+146: 
+147: 
+148:     <span class="ruby-ivar">@query</span> = <span class="ruby-node">&quot;INSERT INTO #{esc(@table)} (#{fields}) VALUES &quot;</span> <span class="ruby-operator">+</span>
+149:       <span class="ruby-node">&quot;(#{values})&quot;</span>
+150:     <span class="ruby-identifier">execute</span>
+151:     <span class="ruby-identifier">inserted_id</span>
+152:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="inserted-id-method" class="method-detail ">
+				<a name="method-i-inserted_id"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">inserted_id</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+returns the last inserted ID
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="inserted-id-source">
+<pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 155</span>
+155:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inserted_id</span>
+156:     <span class="ruby-ivar">@query</span> = <span class="ruby-value str">&quot;SELECT LAST_INSERT_ID();&quot;</span>
+157:     <span class="ruby-identifier">execute</span>
+158:     <span class="ruby-ivar">@result</span>.<span class="ruby-identifier">fetch_row</span>[<span class="ruby-value">0</span>]
+159:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="quoted-string-from-method" class="method-detail ">
+				<a name="method-i-quoted_string_from"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">quoted_string_from</span><span
+						class="method-args">(hash_or_array)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+library function to convert values in a hash (or plain array) into an
+escaped single quoted comma delimited string
+</p>
+<p>
+i.e.
+</p>
+<pre>
+  { :key =&gt; 'val1', :key2 =&gt; &quot;val'2&quot; }  #=&gt; &quot;'val1','val\'2'&quot;
+  [ 'val1', &quot;val'2&quot; ]                   #=&gt; &quot;'val1', 'val\'2'&quot;</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="quoted-string-from-source">
+<pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 230</span>
+230:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">quoted_string_from</span> <span class="ruby-identifier">hash_or_array</span>
+231:     <span class="ruby-identifier">array</span> =  <span class="ruby-identifier">hash_or_array</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Hash</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">hash_or_array</span>.<span class="ruby-identifier">values</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">hash_or_array</span>
+232:     <span class="ruby-identifier">array</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">raw</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;'#{esc(raw)}'&quot;</span>}.<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>)
+233:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="select-method" class="method-detail ">
+				<a name="method-i-select"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">select</span><span
+						class="method-args">(*vals)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+creates a select query and returns the reqult  as Mysql::Result
+</p>
+<p>
+takes an optional last parameter of a hash. This hash has symbol keys of
+any/all of the following: table, <a
+href="MySQLc.html#field_list">field_list</a>, <a
+href="MySQLc.html#id_field">id_field</a>, id, <a
+href="MySQLc.html#extra_cond">extra_cond</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="select-source">
+<pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 124</span>
+124:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">select</span>(*<span class="ruby-identifier">vals</span>)
+125:     <span class="ruby-comment cmt">#print &quot;#{vals}\n&quot;</span>
+126:     <span class="ruby-identifier">set_attributes</span> <span class="ruby-identifier">vals</span> 
+127:     <span class="ruby-identifier">execute</span>
+128:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-attributes-method" class="method-detail ">
+				<a name="method-i-set_attributes"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_attributes</span><span
+						class="method-args">(*vals)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+sets instance attributes from fucntion parameters called by each public API
+methods
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="set-attributes-source">
+<pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 103</span>
+103:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_attributes</span>(*<span class="ruby-identifier">vals</span>)
+104:     <span class="ruby-comment cmt"># when vals gets strung along from another *vals, the original </span>
+105:     <span class="ruby-comment cmt"># empty array becomes the first element of the new vals</span>
+106:     <span class="ruby-comment cmt"># so, we need to pull the first element off and work on that</span>
+107:     <span class="ruby-identifier">vals</span> = <span class="ruby-identifier">vals</span>[<span class="ruby-value">0</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">vals</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'Array'</span>
+108: 
+109:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">vals</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">vals</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;&quot;</span> 
+110:       <span class="ruby-ivar">@table</span>      = <span class="ruby-identifier">vals</span>[<span class="ruby-value">0</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">vals</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">1</span>
+111:       <span class="ruby-ivar">@field_list</span> = <span class="ruby-identifier">vals</span>[<span class="ruby-value">1</span>] <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">vals</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">2</span>
+112:       <span class="ruby-ivar">@id_field</span>   = <span class="ruby-identifier">vals</span>[<span class="ruby-value">2</span>] <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">vals</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">3</span>
+113:       <span class="ruby-ivar">@id</span>         = <span class="ruby-identifier">vals</span>[<span class="ruby-value">3</span>] <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">vals</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">4</span>
+114:       <span class="ruby-ivar">@extra_cond</span> = <span class="ruby-identifier">vals</span>[<span class="ruby-value">4</span>] <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">vals</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">5</span>
+115:     <span class="ruby-keyword kw">end</span>
+116:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="update-method" class="method-detail ">
+				<a name="method-i-update"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">update</span><span
+						class="method-args">(updates, *vals)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+takes a given hash: 
+</p>
+<pre>
+ { :column_one_field =&gt; 'column_one_value', :column_two_field =&gt; 'column_two_value' }
+</pre>
+<p>
+and updates the correct row
+</p>
+<p>
+takes an optional last parameter of a hash. This hash has symbol keys of
+any/all of the following: table, <a
+href="MySQLc.html#field_list">field_list</a>, <a
+href="MySQLc.html#id_field">id_field</a>, id, <a
+href="MySQLc.html#extra_cond">extra_cond</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="update-source">
+<pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 170</span>
+170:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">update</span>(<span class="ruby-identifier">updates</span>, *<span class="ruby-identifier">vals</span>)
+171:     <span class="ruby-identifier">set_attributes</span> <span class="ruby-identifier">vals</span>
+172:     
+173:     <span class="ruby-identifier">sets</span> = <span class="ruby-identifier">updates</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">key</span>,<span class="ruby-identifier">val</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;#{key} = '#{esc(val)}'&quot;</span>}
+174: 
+175:     <span class="ruby-ivar">@query</span> = <span class="ruby-value str">&quot;&quot;</span>
+176:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@id_field</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;&quot;</span>
+177:       <span class="ruby-ivar">@query</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;WHERE #{@id_field} = #{@id}&quot;</span>
+178:     <span class="ruby-keyword kw">end</span>
+179: 
+180:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@extra_cond</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@extra_cond</span>.<span class="ruby-identifier">nil?</span>
+181:       <span class="ruby-ivar">@query</span> <span class="ruby-operator">+=</span> ((<span class="ruby-ivar">@query</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;&quot;</span>) <span class="ruby-operator">?</span> <span class="ruby-value str">&quot; WHERE &quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot; AND &quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-ivar">@extra_cond</span>
+182:     <span class="ruby-keyword kw">end</span>
+183: 
+184:     <span class="ruby-ivar">@query</span> = <span class="ruby-node">&quot;UPDATE #{@table} SET #{sets.join ','} &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@query</span>
+185:     <span class="ruby-identifier">execute</span>
+186:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+
