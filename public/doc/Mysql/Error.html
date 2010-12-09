@@ -1,0 +1,1637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Mysql::Error</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../mysql_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="mysql.rb">mysql.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">StandardError</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-err">::err</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Mysql.html">Mysql</a></li>
+				
+					<li><a href="../Mysql/Error.html">Mysql::Error</a></li>
+				
+					<li><a href="../Mysql/Error.html">Mysql::Error</a></li>
+				
+					<li><a href="../Mysql/Field.html">Mysql::Field</a></li>
+				
+					<li><a href="../Mysql/Field.html">Mysql::Field</a></li>
+				
+					<li><a href="../Mysql/Net.html">Mysql::Net</a></li>
+				
+					<li><a href="../Mysql/Random.html">Mysql::Random</a></li>
+				
+					<li><a href="../Mysql/Result.html">Mysql::Result</a></li>
+				
+					<li><a href="../Mysql/Result.html">Mysql::Result</a></li>
+				
+					<li><a href="../MySQLc.html">MySQLc</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Mysql::Error</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="ER_HASHCHK">ER_HASHCHK</a></dt>
+				
+				<dd class="description"><p>
+Server <a href="Error.html">Error</a>
+</p></dd>
+				
+			
+				<dt><a name="ER_NISAMCHK">ER_NISAMCHK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NO">ER_NO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_YES">ER_YES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_CREATE_FILE">ER_CANT_CREATE_FILE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_CREATE_TABLE">ER_CANT_CREATE_TABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_CREATE_DB">ER_CANT_CREATE_DB</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_DB_CREATE_EXISTS">ER_DB_CREATE_EXISTS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_DB_DROP_EXISTS">ER_DB_DROP_EXISTS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_DB_DROP_DELETE">ER_DB_DROP_DELETE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_DB_DROP_RMDIR">ER_DB_DROP_RMDIR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_DELETE_FILE">ER_CANT_DELETE_FILE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_FIND_SYSTEM_REC">ER_CANT_FIND_SYSTEM_REC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_GET_STAT">ER_CANT_GET_STAT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_GET_WD">ER_CANT_GET_WD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_LOCK">ER_CANT_LOCK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_OPEN_FILE">ER_CANT_OPEN_FILE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_FILE_NOT_FOUND">ER_FILE_NOT_FOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_READ_DIR">ER_CANT_READ_DIR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_SET_WD">ER_CANT_SET_WD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CHECKREAD">ER_CHECKREAD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_DISK_FULL">ER_DISK_FULL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_DUP_KEY">ER_DUP_KEY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_ERROR_ON_CLOSE">ER_ERROR_ON_CLOSE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_ERROR_ON_READ">ER_ERROR_ON_READ</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_ERROR_ON_RENAME">ER_ERROR_ON_RENAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_ERROR_ON_WRITE">ER_ERROR_ON_WRITE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_FILE_USED">ER_FILE_USED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_FILSORT_ABORT">ER_FILSORT_ABORT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_FORM_NOT_FOUND">ER_FORM_NOT_FOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_GET_ERRNO">ER_GET_ERRNO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_ILLEGAL_HA">ER_ILLEGAL_HA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_KEY_NOT_FOUND">ER_KEY_NOT_FOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NOT_FORM_FILE">ER_NOT_FORM_FILE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NOT_KEYFILE">ER_NOT_KEYFILE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_OLD_KEYFILE">ER_OLD_KEYFILE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_OPEN_AS_READONLY">ER_OPEN_AS_READONLY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_OUTOFMEMORY">ER_OUTOFMEMORY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_OUT_OF_SORTMEMORY">ER_OUT_OF_SORTMEMORY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_UNEXPECTED_EOF">ER_UNEXPECTED_EOF</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CON_COUNT_ERROR">ER_CON_COUNT_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_OUT_OF_RESOURCES">ER_OUT_OF_RESOURCES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_BAD_HOST_ERROR">ER_BAD_HOST_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_HANDSHAKE_ERROR">ER_HANDSHAKE_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_DBACCESS_DENIED_ERROR">ER_DBACCESS_DENIED_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_ACCESS_DENIED_ERROR">ER_ACCESS_DENIED_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NO_DB_ERROR">ER_NO_DB_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_UNKNOWN_COM_ERROR">ER_UNKNOWN_COM_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_BAD_NULL_ERROR">ER_BAD_NULL_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_BAD_DB_ERROR">ER_BAD_DB_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TABLE_EXISTS_ERROR">ER_TABLE_EXISTS_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_BAD_TABLE_ERROR">ER_BAD_TABLE_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NON_UNIQ_ERROR">ER_NON_UNIQ_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_SERVER_SHUTDOWN">ER_SERVER_SHUTDOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_BAD_FIELD_ERROR">ER_BAD_FIELD_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_FIELD_WITH_GROUP">ER_WRONG_FIELD_WITH_GROUP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_GROUP_FIELD">ER_WRONG_GROUP_FIELD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_SUM_SELECT">ER_WRONG_SUM_SELECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_VALUE_COUNT">ER_WRONG_VALUE_COUNT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TOO_LONG_IDENT">ER_TOO_LONG_IDENT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_DUP_FIELDNAME">ER_DUP_FIELDNAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_DUP_KEYNAME">ER_DUP_KEYNAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_DUP_ENTRY">ER_DUP_ENTRY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_FIELD_SPEC">ER_WRONG_FIELD_SPEC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_PARSE_ERROR">ER_PARSE_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_EMPTY_QUERY">ER_EMPTY_QUERY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NONUNIQ_TABLE">ER_NONUNIQ_TABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_INVALID_DEFAULT">ER_INVALID_DEFAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_MULTIPLE_PRI_KEY">ER_MULTIPLE_PRI_KEY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TOO_MANY_KEYS">ER_TOO_MANY_KEYS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TOO_MANY_KEY_PARTS">ER_TOO_MANY_KEY_PARTS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TOO_LONG_KEY">ER_TOO_LONG_KEY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_KEY_COLUMN_DOES_NOT_EXITS">ER_KEY_COLUMN_DOES_NOT_EXITS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_BLOB_USED_AS_KEY">ER_BLOB_USED_AS_KEY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TOO_BIG_FIELDLENGTH">ER_TOO_BIG_FIELDLENGTH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_AUTO_KEY">ER_WRONG_AUTO_KEY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_READY">ER_READY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NORMAL_SHUTDOWN">ER_NORMAL_SHUTDOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_GOT_SIGNAL">ER_GOT_SIGNAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_SHUTDOWN_COMPLETE">ER_SHUTDOWN_COMPLETE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_FORCING_CLOSE">ER_FORCING_CLOSE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_IPSOCK_ERROR">ER_IPSOCK_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NO_SUCH_INDEX">ER_NO_SUCH_INDEX</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_FIELD_TERMINATORS">ER_WRONG_FIELD_TERMINATORS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_BLOBS_AND_NO_TERMINATED">ER_BLOBS_AND_NO_TERMINATED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TEXTFILE_NOT_READABLE">ER_TEXTFILE_NOT_READABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_FILE_EXISTS_ERROR">ER_FILE_EXISTS_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_LOAD_INFO">ER_LOAD_INFO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_ALTER_INFO">ER_ALTER_INFO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_SUB_KEY">ER_WRONG_SUB_KEY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_REMOVE_ALL_FIELDS">ER_CANT_REMOVE_ALL_FIELDS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_DROP_FIELD_OR_KEY">ER_CANT_DROP_FIELD_OR_KEY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_INSERT_INFO">ER_INSERT_INFO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_INSERT_TABLE_USED">ER_INSERT_TABLE_USED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NO_SUCH_THREAD">ER_NO_SUCH_THREAD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_KILL_DENIED_ERROR">ER_KILL_DENIED_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NO_TABLES_USED">ER_NO_TABLES_USED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TOO_BIG_SET">ER_TOO_BIG_SET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NO_UNIQUE_LOGFILE">ER_NO_UNIQUE_LOGFILE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TABLE_NOT_LOCKED_FOR_WRITE">ER_TABLE_NOT_LOCKED_FOR_WRITE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TABLE_NOT_LOCKED">ER_TABLE_NOT_LOCKED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_BLOB_CANT_HAVE_DEFAULT">ER_BLOB_CANT_HAVE_DEFAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_DB_NAME">ER_WRONG_DB_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_TABLE_NAME">ER_WRONG_TABLE_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TOO_BIG_SELECT">ER_TOO_BIG_SELECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_UNKNOWN_ERROR">ER_UNKNOWN_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_UNKNOWN_PROCEDURE">ER_UNKNOWN_PROCEDURE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_PARAMCOUNT_TO_PROCEDURE">ER_WRONG_PARAMCOUNT_TO_PROCEDURE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_PARAMETERS_TO_PROCEDURE">ER_WRONG_PARAMETERS_TO_PROCEDURE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_UNKNOWN_TABLE">ER_UNKNOWN_TABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_FIELD_SPECIFIED_TWICE">ER_FIELD_SPECIFIED_TWICE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_INVALID_GROUP_FUNC_USE">ER_INVALID_GROUP_FUNC_USE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_UNSUPPORTED_EXTENSION">ER_UNSUPPORTED_EXTENSION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TABLE_MUST_HAVE_COLUMNS">ER_TABLE_MUST_HAVE_COLUMNS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_RECORD_FILE_FULL">ER_RECORD_FILE_FULL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_UNKNOWN_CHARACTER_SET">ER_UNKNOWN_CHARACTER_SET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TOO_MANY_TABLES">ER_TOO_MANY_TABLES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TOO_MANY_FIELDS">ER_TOO_MANY_FIELDS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TOO_BIG_ROWSIZE">ER_TOO_BIG_ROWSIZE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_STACK_OVERRUN">ER_STACK_OVERRUN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_OUTER_JOIN">ER_WRONG_OUTER_JOIN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NULL_COLUMN_IN_INDEX">ER_NULL_COLUMN_IN_INDEX</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_FIND_UDF">ER_CANT_FIND_UDF</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_INITIALIZE_UDF">ER_CANT_INITIALIZE_UDF</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_UDF_NO_PATHS">ER_UDF_NO_PATHS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_UDF_EXISTS">ER_UDF_EXISTS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_OPEN_LIBRARY">ER_CANT_OPEN_LIBRARY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_FIND_DL_ENTRY">ER_CANT_FIND_DL_ENTRY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_FUNCTION_NOT_DEFINED">ER_FUNCTION_NOT_DEFINED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_HOST_IS_BLOCKED">ER_HOST_IS_BLOCKED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_HOST_NOT_PRIVILEGED">ER_HOST_NOT_PRIVILEGED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_PASSWORD_ANONYMOUS_USER">ER_PASSWORD_ANONYMOUS_USER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_PASSWORD_NOT_ALLOWED">ER_PASSWORD_NOT_ALLOWED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_PASSWORD_NO_MATCH">ER_PASSWORD_NO_MATCH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_UPDATE_INFO">ER_UPDATE_INFO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_CREATE_THREAD">ER_CANT_CREATE_THREAD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_VALUE_COUNT_ON_ROW">ER_WRONG_VALUE_COUNT_ON_ROW</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_REOPEN_TABLE">ER_CANT_REOPEN_TABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_INVALID_USE_OF_NULL">ER_INVALID_USE_OF_NULL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_REGEXP_ERROR">ER_REGEXP_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_MIX_OF_GROUP_FUNC_AND_FIELDS">ER_MIX_OF_GROUP_FUNC_AND_FIELDS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NONEXISTING_GRANT">ER_NONEXISTING_GRANT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TABLEACCESS_DENIED_ERROR">ER_TABLEACCESS_DENIED_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_COLUMNACCESS_DENIED_ERROR">ER_COLUMNACCESS_DENIED_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_ILLEGAL_GRANT_FOR_TABLE">ER_ILLEGAL_GRANT_FOR_TABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_GRANT_WRONG_HOST_OR_USER">ER_GRANT_WRONG_HOST_OR_USER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NO_SUCH_TABLE">ER_NO_SUCH_TABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NONEXISTING_TABLE_GRANT">ER_NONEXISTING_TABLE_GRANT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NOT_ALLOWED_COMMAND">ER_NOT_ALLOWED_COMMAND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_SYNTAX_ERROR">ER_SYNTAX_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_DELAYED_CANT_CHANGE_LOCK">ER_DELAYED_CANT_CHANGE_LOCK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TOO_MANY_DELAYED_THREADS">ER_TOO_MANY_DELAYED_THREADS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_ABORTING_CONNECTION">ER_ABORTING_CONNECTION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NET_PACKET_TOO_LARGE">ER_NET_PACKET_TOO_LARGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NET_READ_ERROR_FROM_PIPE">ER_NET_READ_ERROR_FROM_PIPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NET_FCNTL_ERROR">ER_NET_FCNTL_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NET_PACKETS_OUT_OF_ORDER">ER_NET_PACKETS_OUT_OF_ORDER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NET_UNCOMPRESS_ERROR">ER_NET_UNCOMPRESS_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NET_READ_ERROR">ER_NET_READ_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NET_READ_INTERRUPTED">ER_NET_READ_INTERRUPTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NET_ERROR_ON_WRITE">ER_NET_ERROR_ON_WRITE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NET_WRITE_INTERRUPTED">ER_NET_WRITE_INTERRUPTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TOO_LONG_STRING">ER_TOO_LONG_STRING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TABLE_CANT_HANDLE_BLOB">ER_TABLE_CANT_HANDLE_BLOB</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TABLE_CANT_HANDLE_AUTO_INCREMENT">ER_TABLE_CANT_HANDLE_AUTO_INCREMENT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_DELAYED_INSERT_TABLE_LOCKED">ER_DELAYED_INSERT_TABLE_LOCKED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_COLUMN_NAME">ER_WRONG_COLUMN_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_KEY_COLUMN">ER_WRONG_KEY_COLUMN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_MRG_TABLE">ER_WRONG_MRG_TABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_DUP_UNIQUE">ER_DUP_UNIQUE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_BLOB_KEY_WITHOUT_LENGTH">ER_BLOB_KEY_WITHOUT_LENGTH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_PRIMARY_CANT_HAVE_NULL">ER_PRIMARY_CANT_HAVE_NULL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TOO_MANY_ROWS">ER_TOO_MANY_ROWS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_REQUIRES_PRIMARY_KEY">ER_REQUIRES_PRIMARY_KEY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NO_RAID_COMPILED">ER_NO_RAID_COMPILED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_UPDATE_WITHOUT_KEY_IN_SAFE_MODE">ER_UPDATE_WITHOUT_KEY_IN_SAFE_MODE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_KEY_DOES_NOT_EXITS">ER_KEY_DOES_NOT_EXITS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CHECK_NO_SUCH_TABLE">ER_CHECK_NO_SUCH_TABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CHECK_NOT_IMPLEMENTED">ER_CHECK_NOT_IMPLEMENTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_DO_THIS_DURING_AN_TRANSACTION">ER_CANT_DO_THIS_DURING_AN_TRANSACTION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_ERROR_DURING_COMMIT">ER_ERROR_DURING_COMMIT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_ERROR_DURING_ROLLBACK">ER_ERROR_DURING_ROLLBACK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_ERROR_DURING_FLUSH_LOGS">ER_ERROR_DURING_FLUSH_LOGS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_ERROR_DURING_CHECKPOINT">ER_ERROR_DURING_CHECKPOINT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NEW_ABORTING_CONNECTION">ER_NEW_ABORTING_CONNECTION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_DUMP_NOT_IMPLEMENTED">ER_DUMP_NOT_IMPLEMENTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_FLUSH_MASTER_BINLOG_CLOSED">ER_FLUSH_MASTER_BINLOG_CLOSED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_INDEX_REBUILD">ER_INDEX_REBUILD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_MASTER">ER_MASTER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_MASTER_NET_READ">ER_MASTER_NET_READ</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_MASTER_NET_WRITE">ER_MASTER_NET_WRITE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_FT_MATCHING_KEY_NOT_FOUND">ER_FT_MATCHING_KEY_NOT_FOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_LOCK_OR_ACTIVE_TRANSACTION">ER_LOCK_OR_ACTIVE_TRANSACTION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_UNKNOWN_SYSTEM_VARIABLE">ER_UNKNOWN_SYSTEM_VARIABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CRASHED_ON_USAGE">ER_CRASHED_ON_USAGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CRASHED_ON_REPAIR">ER_CRASHED_ON_REPAIR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WARNING_NOT_COMPLETE_ROLLBACK">ER_WARNING_NOT_COMPLETE_ROLLBACK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TRANS_CACHE_FULL">ER_TRANS_CACHE_FULL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_SLAVE_MUST_STOP">ER_SLAVE_MUST_STOP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_SLAVE_NOT_RUNNING">ER_SLAVE_NOT_RUNNING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_BAD_SLAVE">ER_BAD_SLAVE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_MASTER_INFO">ER_MASTER_INFO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_SLAVE_THREAD">ER_SLAVE_THREAD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TOO_MANY_USER_CONNECTIONS">ER_TOO_MANY_USER_CONNECTIONS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_SET_CONSTANTS_ONLY">ER_SET_CONSTANTS_ONLY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_LOCK_WAIT_TIMEOUT">ER_LOCK_WAIT_TIMEOUT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_LOCK_TABLE_FULL">ER_LOCK_TABLE_FULL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_READ_ONLY_TRANSACTION">ER_READ_ONLY_TRANSACTION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_DROP_DB_WITH_READ_LOCK">ER_DROP_DB_WITH_READ_LOCK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CREATE_DB_WITH_READ_LOCK">ER_CREATE_DB_WITH_READ_LOCK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_ARGUMENTS">ER_WRONG_ARGUMENTS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NO_PERMISSION_TO_CREATE_USER">ER_NO_PERMISSION_TO_CREATE_USER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_UNION_TABLES_IN_DIFFERENT_DIR">ER_UNION_TABLES_IN_DIFFERENT_DIR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_LOCK_DEADLOCK">ER_LOCK_DEADLOCK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_TABLE_CANT_HANDLE_FULLTEXT">ER_TABLE_CANT_HANDLE_FULLTEXT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANNOT_ADD_FOREIGN">ER_CANNOT_ADD_FOREIGN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NO_REFERENCED_ROW">ER_NO_REFERENCED_ROW</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_ROW_IS_REFERENCED">ER_ROW_IS_REFERENCED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CONNECT_TO_MASTER">ER_CONNECT_TO_MASTER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_QUERY_ON_MASTER">ER_QUERY_ON_MASTER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_ERROR_WHEN_EXECUTING_COMMAND">ER_ERROR_WHEN_EXECUTING_COMMAND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_USAGE">ER_WRONG_USAGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_NUMBER_OF_COLUMNS_IN_SELECT">ER_WRONG_NUMBER_OF_COLUMNS_IN_SELECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_UPDATE_WITH_READLOCK">ER_CANT_UPDATE_WITH_READLOCK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_MIXING_NOT_ALLOWED">ER_MIXING_NOT_ALLOWED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_DUP_ARGUMENT">ER_DUP_ARGUMENT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_USER_LIMIT_REACHED">ER_USER_LIMIT_REACHED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_SPECIFIC_ACCESS_DENIED_ERROR">ER_SPECIFIC_ACCESS_DENIED_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_LOCAL_VARIABLE">ER_LOCAL_VARIABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_GLOBAL_VARIABLE">ER_GLOBAL_VARIABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NO_DEFAULT">ER_NO_DEFAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_VALUE_FOR_VAR">ER_WRONG_VALUE_FOR_VAR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_WRONG_TYPE_FOR_VAR">ER_WRONG_TYPE_FOR_VAR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_VAR_CANT_BE_READ">ER_VAR_CANT_BE_READ</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_CANT_USE_OPTION_HERE">ER_CANT_USE_OPTION_HERE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_NOT_SUPPORTED_YET">ER_NOT_SUPPORTED_YET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_MASTER_FATAL_ERROR_READING_BINLOG">ER_MASTER_FATAL_ERROR_READING_BINLOG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_SLAVE_IGNORED_TABLE">ER_SLAVE_IGNORED_TABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ER_ERROR_MESSAGES">ER_ERROR_MESSAGES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_MIN_ERROR">CR_MIN_ERROR</a></dt>
+				
+				<dd class="description"><p>
+Client <a href="Error.html">Error</a>
+</p></dd>
+				
+			
+				<dt><a name="CR_MAX_ERROR">CR_MAX_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_UNKNOWN_ERROR">CR_UNKNOWN_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_SOCKET_CREATE_ERROR">CR_SOCKET_CREATE_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_CONNECTION_ERROR">CR_CONNECTION_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_CONN_HOST_ERROR">CR_CONN_HOST_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_IPSOCK_ERROR">CR_IPSOCK_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_UNKNOWN_HOST">CR_UNKNOWN_HOST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_SERVER_GONE_ERROR">CR_SERVER_GONE_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_VERSION_ERROR">CR_VERSION_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_OUT_OF_MEMORY">CR_OUT_OF_MEMORY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_WRONG_HOST_INFO">CR_WRONG_HOST_INFO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_LOCALHOST_CONNECTION">CR_LOCALHOST_CONNECTION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_TCP_CONNECTION">CR_TCP_CONNECTION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_SERVER_HANDSHAKE_ERR">CR_SERVER_HANDSHAKE_ERR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_SERVER_LOST">CR_SERVER_LOST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_COMMANDS_OUT_OF_SYNC">CR_COMMANDS_OUT_OF_SYNC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_NAMEDPIPE_CONNECTION">CR_NAMEDPIPE_CONNECTION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_NAMEDPIPEWAIT_ERROR">CR_NAMEDPIPEWAIT_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_NAMEDPIPEOPEN_ERROR">CR_NAMEDPIPEOPEN_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_NAMEDPIPESETSTATE_ERROR">CR_NAMEDPIPESETSTATE_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_CANT_READ_CHARSET">CR_CANT_READ_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_NET_PACKET_TOO_LARGE">CR_NET_PACKET_TOO_LARGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_EMBEDDED_CONNECTION">CR_EMBEDDED_CONNECTION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_PROBE_SLAVE_STATUS">CR_PROBE_SLAVE_STATUS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_PROBE_SLAVE_HOSTS">CR_PROBE_SLAVE_HOSTS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_PROBE_SLAVE_CONNECT">CR_PROBE_SLAVE_CONNECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_PROBE_MASTER_CONNECT">CR_PROBE_MASTER_CONNECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_SSL_CONNECTION_ERROR">CR_SSL_CONNECTION_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CR_MALFORMED_PACKET">CR_MALFORMED_PACKET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CLIENT_ERRORS">CLIENT_ERRORS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="errno-attribute-method" class="method-detail">
+				<a name="errno"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">errno</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="error-attribute-method" class="method-detail">
+				<a name="error"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">error</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="err-method" class="method-detail ">
+				<a name="method-c-err"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">err</span><span
+						class="method-args">(errno)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="err-source">
+<pre>
+     <span class="ruby-comment cmt"># File mysql.rb, line 995</span>
+995:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-identifier">err</span>(<span class="ruby-identifier">errno</span>)
+996:       <span class="ruby-constant">CLIENT_ERRORS</span>[<span class="ruby-identifier">errno</span> <span class="ruby-operator">-</span> <span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">CR_MIN_ERROR</span>]
+997:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(errno, error)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File mysql.rb, line 988</span>
+988:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">errno</span>, <span class="ruby-identifier">error</span>)
+989:       <span class="ruby-ivar">@errno</span> = <span class="ruby-identifier">errno</span>
+990:       <span class="ruby-ivar">@error</span> = <span class="ruby-identifier">error</span>
+991:       <span class="ruby-keyword kw">super</span> <span class="ruby-identifier">error</span>
+992:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+
