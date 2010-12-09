@@ -11,8 +11,8 @@ class MySQLc
   #require 'rubygems'
   require 'mysql'
   
-  attr_accessor :table, :field_list, :id_field, :id, :extra_cond,
-    :result, :query
+  attr_accessor :table, :field_list, :id_field, :id, :extra_cond, :query
+  attr_reader :result
 
   # initializes common instance variables.
   #
