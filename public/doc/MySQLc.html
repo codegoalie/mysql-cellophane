@@ -126,24 +126,6 @@
 
 				<ul class="link-list">
 				
-					<li><a href="./Mysql.html">Mysql</a></li>
-				
-					<li><a href="./Mysql/Error.html">Mysql::Error</a></li>
-				
-					<li><a href="./Mysql/Error.html">Mysql::Error</a></li>
-				
-					<li><a href="./Mysql/Field.html">Mysql::Field</a></li>
-				
-					<li><a href="./Mysql/Field.html">Mysql::Field</a></li>
-				
-					<li><a href="./Mysql/Net.html">Mysql::Net</a></li>
-				
-					<li><a href="./Mysql/Random.html">Mysql::Random</a></li>
-				
-					<li><a href="./Mysql/Result.html">Mysql::Result</a></li>
-				
-					<li><a href="./Mysql/Result.html">Mysql::Result</a></li>
-				
 					<li><a href="./MySQLc.html">MySQLc</a></li>
 				
 				</ul>
@@ -159,11 +141,10 @@
 
 		<div id="description">
 			<p>
-MySQL-cellophane is a very thin wrapper around the <a
-href="Mysql.html">Mysql</a> Ruby implementation MySQc provides an API
-interface for those famaliar with SQL  and wishes to have more fine grained
-control over their queries, but don&#8217;t want to write each query
-manually.
+MySQL-cellophane is a very thin wrapper around the Mysql Ruby
+implementation MySQc provides an API interface for those famaliar with SQL 
+and wishes to have more fine grained control over their queries, but
+don&#8217;t want to write each query manually.
 </p>
 <table>
 <tr><td valign="top">Author</td><td><p>
@@ -435,8 +416,8 @@ NEED to be used externally.
 				<div class="method-description">
 					
 					<p>
-takes hash of connection ooptions, has default also sets @db as <a
-href="Mysql.html">Mysql</a> instance
+takes hash of connection ooptions, has default also sets @db as Mysql
+instance
 </p>
 <p>
 as separate method for lazy connection
@@ -493,13 +474,13 @@ href="MySQLc.html#extra_cond">extra_cond</a>
 					<div class="method-source-code"
 						id="count-source">
 <pre>
-     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 215</span>
-215:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">count</span>(*<span class="ruby-identifier">vals</span>)
-216:     <span class="ruby-identifier">set_attributes</span> <span class="ruby-identifier">vals</span>
-217: 
-218:     <span class="ruby-identifier">result</span> = <span class="ruby-identifier">execute</span>
-219:     <span class="ruby-identifier">result</span>.<span class="ruby-identifier">num_rows</span>
-220:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 214</span>
+214:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">count</span>(*<span class="ruby-identifier">vals</span>)
+215:     <span class="ruby-identifier">set_attributes</span> <span class="ruby-identifier">vals</span>
+216: 
+217:     <span class="ruby-identifier">result</span> = <span class="ruby-identifier">execute</span>
+218:     <span class="ruby-identifier">result</span>.<span class="ruby-identifier">num_rows</span>
+219:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -539,22 +520,22 @@ href="MySQLc.html#extra_cond">extra_cond</a>
 					<div class="method-source-code"
 						id="delete-source">
 <pre>
-     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 194</span>
-194:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">delete</span>(*<span class="ruby-identifier">vals</span>)
-195:     <span class="ruby-identifier">set_attributes</span> <span class="ruby-identifier">vals</span>
-196: 
-197:     <span class="ruby-ivar">@query</span> = <span class="ruby-value str">&quot;&quot;</span>
-198:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@id_field</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;&quot;</span>
-199:       <span class="ruby-ivar">@query</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;WHERE #{esc @id_field} = '#{esc @id}'&quot;</span>
-200:     <span class="ruby-keyword kw">end</span>
-201: 
-202:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@extra_cond</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@extra_cond</span>.<span class="ruby-identifier">nil?</span>
-203:       <span class="ruby-ivar">@query</span> <span class="ruby-operator">+=</span> ((<span class="ruby-ivar">@query</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;&quot;</span>) <span class="ruby-operator">?</span> <span class="ruby-value str">&quot; WHERE &quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot; AND &quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-ivar">@extra_cond</span>
-204:     <span class="ruby-keyword kw">end</span>
-205: 
-206:     <span class="ruby-ivar">@query</span> = <span class="ruby-node">&quot;DELETE FROM #{@table} #{@query}&quot;</span>
-207:     <span class="ruby-identifier">execute</span>
-208:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 193</span>
+193:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">delete</span>(*<span class="ruby-identifier">vals</span>)
+194:     <span class="ruby-identifier">set_attributes</span> <span class="ruby-identifier">vals</span>
+195: 
+196:     <span class="ruby-ivar">@query</span> = <span class="ruby-value str">&quot;&quot;</span>
+197:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@id_field</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;&quot;</span>
+198:       <span class="ruby-ivar">@query</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;WHERE #{esc @id_field} = '#{esc @id}'&quot;</span>
+199:     <span class="ruby-keyword kw">end</span>
+200: 
+201:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@extra_cond</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@extra_cond</span>.<span class="ruby-identifier">nil?</span>
+202:       <span class="ruby-ivar">@query</span> <span class="ruby-operator">+=</span> ((<span class="ruby-ivar">@query</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;&quot;</span>) <span class="ruby-operator">?</span> <span class="ruby-value str">&quot; WHERE &quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot; AND &quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-ivar">@extra_cond</span>
+203:     <span class="ruby-keyword kw">end</span>
+204: 
+205:     <span class="ruby-ivar">@query</span> = <span class="ruby-node">&quot;DELETE FROM #{@table} #{@query}&quot;</span>
+206:     <span class="ruby-identifier">execute</span>
+207:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -587,12 +568,12 @@ takes string parameter and  returns saftely escaped string
 					<div class="method-source-code"
 						id="esc-source">
 <pre>
-     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 254</span>
-254:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">esc</span>(<span class="ruby-identifier">raw_string</span>)
-255:     <span class="ruby-identifier">connect</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-comment cmt">#connect to the database if needs be</span>
-256: 
-257:     <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">quote</span>(<span class="ruby-identifier">raw_string</span>.<span class="ruby-identifier">to_s</span>)
-258:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 252</span>
+252:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">esc</span>(<span class="ruby-identifier">raw_string</span>)
+253:     <span class="ruby-identifier">connect</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-comment cmt">#connect to the database if needs be</span>
+254: 
+255:     <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">quote</span>(<span class="ruby-identifier">raw_string</span>.<span class="ruby-identifier">to_s</span>)
+256:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -692,10 +673,10 @@ takes a hash and returns a comma separated list of keys
 					<div class="method-source-code"
 						id="extract-fields-from-source">
 <pre>
-     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 247</span>
-247:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract_fields_from</span> <span class="ruby-identifier">hash</span>
-248:     <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>)
-249:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 245</span>
+245:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract_fields_from</span> <span class="ruby-identifier">hash</span>
+246:     <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>)
+247:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -723,7 +704,6 @@ takes a hash and returns a comma separated list of keys
 takes a hash and returns a songle  quoted string of the values
 </p>
 <pre>
-  
   { :key =&gt; 'val1', :key2 =&gt; &quot;val'2&quot; }  #=&gt; &quot;'val1','val\'2'&quot;</pre>
 					
 
@@ -731,10 +711,10 @@ takes a hash and returns a songle  quoted string of the values
 					<div class="method-source-code"
 						id="extract-values-from-source">
 <pre>
-     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 239</span>
-239:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract_values_from</span> <span class="ruby-identifier">hash</span>
-240:     <span class="ruby-identifier">quoted_string_from</span> <span class="ruby-identifier">hash</span>
-241:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 237</span>
+237:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract_values_from</span> <span class="ruby-identifier">hash</span>
+238:     <span class="ruby-identifier">quoted_string_from</span> <span class="ruby-identifier">hash</span>
+239:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -762,8 +742,7 @@ takes a hash and returns a songle  quoted string of the values
 inserts a new row into the table  from the given hash
 </p>
 <pre>
- { :column_one_field =&gt; 'column_one_value', 
- :column_two_field =&gt; 'column_two_value' }
+ { :column_one_field =&gt; 'column_one_value', :column_two_field =&gt; 'column_two_value' }
 </pre>
 <p>
 return the newly insertted row&#8217;s ID
@@ -781,19 +760,19 @@ href="MySQLc.html#extra_cond">extra_cond</a>
 					<div class="method-source-code"
 						id="insert-source">
 <pre>
-     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 141</span>
-141:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">insert</span>(<span class="ruby-identifier">inserts</span>, *<span class="ruby-identifier">vals</span>)
-142:     <span class="ruby-identifier">set_attributes</span> <span class="ruby-identifier">vals</span>
-143: 
-144:     <span class="ruby-identifier">fields</span> = <span class="ruby-identifier">extract_fields_from</span> <span class="ruby-identifier">inserts</span> 
-145:     <span class="ruby-identifier">values</span> = <span class="ruby-identifier">extract_values_from</span> <span class="ruby-identifier">inserts</span> 
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 140</span>
+140:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">insert</span>(<span class="ruby-identifier">inserts</span>, *<span class="ruby-identifier">vals</span>)
+141:     <span class="ruby-identifier">set_attributes</span> <span class="ruby-identifier">vals</span>
+142: 
+143:     <span class="ruby-identifier">fields</span> = <span class="ruby-identifier">extract_fields_from</span> <span class="ruby-identifier">inserts</span> 
+144:     <span class="ruby-identifier">values</span> = <span class="ruby-identifier">extract_values_from</span> <span class="ruby-identifier">inserts</span> 
+145: 
 146: 
-147: 
-148:     <span class="ruby-ivar">@query</span> = <span class="ruby-node">&quot;INSERT INTO #{esc(@table)} (#{fields}) VALUES &quot;</span> <span class="ruby-operator">+</span>
-149:       <span class="ruby-node">&quot;(#{values})&quot;</span>
-150:     <span class="ruby-identifier">execute</span>
-151:     <span class="ruby-identifier">inserted_id</span>
-152:   <span class="ruby-keyword kw">end</span></pre>
+147:     <span class="ruby-ivar">@query</span> = <span class="ruby-node">&quot;INSERT INTO #{esc(@table)} (#{fields}) VALUES &quot;</span> <span class="ruby-operator">+</span>
+148:       <span class="ruby-node">&quot;(#{values})&quot;</span>
+149:     <span class="ruby-identifier">execute</span>
+150:     <span class="ruby-identifier">inserted_id</span>
+151:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -826,12 +805,12 @@ returns the last inserted ID
 					<div class="method-source-code"
 						id="inserted-id-source">
 <pre>
-     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 155</span>
-155:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inserted_id</span>
-156:     <span class="ruby-ivar">@query</span> = <span class="ruby-value str">&quot;SELECT LAST_INSERT_ID();&quot;</span>
-157:     <span class="ruby-identifier">execute</span>
-158:     <span class="ruby-ivar">@result</span>.<span class="ruby-identifier">fetch_row</span>[<span class="ruby-value">0</span>]
-159:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 154</span>
+154:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inserted_id</span>
+155:     <span class="ruby-ivar">@query</span> = <span class="ruby-value str">&quot;SELECT LAST_INSERT_ID();&quot;</span>
+156:     <span class="ruby-identifier">execute</span>
+157:     <span class="ruby-ivar">@result</span>.<span class="ruby-identifier">fetch_row</span>[<span class="ruby-value">0</span>]
+158:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -864,18 +843,18 @@ i.e.
 </p>
 <pre>
   { :key =&gt; 'val1', :key2 =&gt; &quot;val'2&quot; }  #=&gt; &quot;'val1','val\'2'&quot;
-  [ 'val1', &quot;val'2&quot; ]                   #=&gt; &quot;'val1', 'val\'2'&quot;</pre>
+  [ 'val1', &quot;val'2&quot; ]                   #=&gt; &quot;'val1','val\'2'&quot;</pre>
 					
 
 					
 					<div class="method-source-code"
 						id="quoted-string-from-source">
 <pre>
-     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 230</span>
-230:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">quoted_string_from</span> <span class="ruby-identifier">hash_or_array</span>
-231:     <span class="ruby-identifier">array</span> =  <span class="ruby-identifier">hash_or_array</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Hash</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">hash_or_array</span>.<span class="ruby-identifier">values</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">hash_or_array</span>
-232:     <span class="ruby-identifier">array</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">raw</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;'#{esc(raw)}'&quot;</span>}.<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>)
-233:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 229</span>
+229:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">quoted_string_from</span> <span class="ruby-identifier">hash_or_array</span>
+230:     <span class="ruby-identifier">array</span> =  <span class="ruby-identifier">hash_or_array</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Hash</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">hash_or_array</span>.<span class="ruby-identifier">values</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">hash_or_array</span>
+231:     <span class="ruby-identifier">array</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">raw</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;'#{esc(raw)}'&quot;</span>}.<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>)
+232:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -900,8 +879,7 @@ i.e.
 				<div class="method-description">
 					
 					<p>
-creates a select query and returns the reqult  as <a
-href="Mysql/Result.html">Mysql::Result</a>
+creates a select query and returns the reqult  as Mysql::Result
 </p>
 <p>
 takes an optional last parameter of a hash. This hash has symbol keys of
@@ -1015,24 +993,24 @@ href="MySQLc.html#extra_cond">extra_cond</a>
 					<div class="method-source-code"
 						id="update-source">
 <pre>
-     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 170</span>
-170:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">update</span>(<span class="ruby-identifier">updates</span>, *<span class="ruby-identifier">vals</span>)
-171:     <span class="ruby-identifier">set_attributes</span> <span class="ruby-identifier">vals</span>
-172:     
-173:     <span class="ruby-identifier">sets</span> = <span class="ruby-identifier">updates</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">key</span>,<span class="ruby-identifier">val</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;#{key} = '#{esc(val)}'&quot;</span>}
-174: 
-175:     <span class="ruby-ivar">@query</span> = <span class="ruby-value str">&quot;&quot;</span>
-176:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@id_field</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;&quot;</span>
-177:       <span class="ruby-ivar">@query</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;WHERE #{@id_field} = #{@id}&quot;</span>
-178:     <span class="ruby-keyword kw">end</span>
-179: 
-180:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@extra_cond</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@extra_cond</span>.<span class="ruby-identifier">nil?</span>
-181:       <span class="ruby-ivar">@query</span> <span class="ruby-operator">+=</span> ((<span class="ruby-ivar">@query</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;&quot;</span>) <span class="ruby-operator">?</span> <span class="ruby-value str">&quot; WHERE &quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot; AND &quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-ivar">@extra_cond</span>
-182:     <span class="ruby-keyword kw">end</span>
-183: 
-184:     <span class="ruby-ivar">@query</span> = <span class="ruby-node">&quot;UPDATE #{@table} SET #{sets.join ','} &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@query</span>
-185:     <span class="ruby-identifier">execute</span>
-186:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File mysql-cellophane.rb, line 169</span>
+169:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">update</span>(<span class="ruby-identifier">updates</span>, *<span class="ruby-identifier">vals</span>)
+170:     <span class="ruby-identifier">set_attributes</span> <span class="ruby-identifier">vals</span>
+171:     
+172:     <span class="ruby-identifier">sets</span> = <span class="ruby-identifier">updates</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">key</span>,<span class="ruby-identifier">val</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;#{key} = '#{esc(val)}'&quot;</span>}
+173: 
+174:     <span class="ruby-ivar">@query</span> = <span class="ruby-value str">&quot;&quot;</span>
+175:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@id_field</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;&quot;</span>
+176:       <span class="ruby-ivar">@query</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;WHERE #{@id_field} = #{@id}&quot;</span>
+177:     <span class="ruby-keyword kw">end</span>
+178: 
+179:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@extra_cond</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@extra_cond</span>.<span class="ruby-identifier">nil?</span>
+180:       <span class="ruby-ivar">@query</span> <span class="ruby-operator">+=</span> ((<span class="ruby-ivar">@query</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;&quot;</span>) <span class="ruby-operator">?</span> <span class="ruby-value str">&quot; WHERE &quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot; AND &quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-ivar">@extra_cond</span>
+181:     <span class="ruby-keyword kw">end</span>
+182: 
+183:     <span class="ruby-ivar">@query</span> = <span class="ruby-node">&quot;UPDATE #{@table} SET #{sets.join ','} &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@query</span>
+184:     <span class="ruby-identifier">execute</span>
+185:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

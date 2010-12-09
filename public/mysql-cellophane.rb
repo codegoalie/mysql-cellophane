@@ -130,8 +130,7 @@ class MySQLc
   # inserts a new row into the table 
   # from the given hash
   #
-  #  { :column_one_field => 'column_one_value', 
-  #  :column_two_field => 'column_two_value' }
+  #  { :column_one_field => 'column_one_value', :column_two_field => 'column_two_value' }
   #
   # return the newly insertted row's ID
   #
@@ -226,7 +225,7 @@ class MySQLc
   #
   # i.e.
   #   { :key => 'val1', :key2 => "val'2" }  #=> "'val1','val\'2'"
-  #   [ 'val1', "val'2" ]                   #=> "'val1', 'val\'2'"
+  #   [ 'val1', "val'2" ]                   #=> "'val1','val\'2'"
   def quoted_string_from hash_or_array
     array =  hash_or_array.class == Hash ? hash_or_array.values : hash_or_array
     array.collect { |raw| "'#{esc(raw)}'"}.join(',')
@@ -234,7 +233,6 @@ class MySQLc
 
   # takes a hash and returns a songle 
   # quoted string of the values
-  #   
   #   { :key => 'val1', :key2 => "val'2" }  #=> "'val1','val\'2'"
   def extract_values_from hash
     quoted_string_from hash
