@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>execute (MySQLc)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File mysql-cellophane.rb, line 58</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">execute</span>
+    <span class="ruby-identifier">log</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">'sql_log.log'</span>, <span class="ruby-value str">'a'</span>)
+    <span class="ruby-identifier">log</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Before: #{@query}&quot;</span>
+    <span class="ruby-identifier">log</span>.<span class="ruby-identifier">close</span>
+    <span class="ruby-identifier">build_query</span> <span class="ruby-keyword kw">if</span>(<span class="ruby-ivar">@query</span>.<span class="ruby-identifier">nil?</span>) 
+
+    <span class="ruby-identifier">query</span> = <span class="ruby-ivar">@query</span> <span class="ruby-comment cmt"># keep local copy of query string</span>
+    <span class="ruby-ivar">@query</span> = <span class="ruby-keyword kw">nil</span> <span class="ruby-comment cmt">#prevent same queries from running more than once without rebuilding</span>
+
+    <span class="ruby-comment cmt">#print &quot;#{query}\n&quot;</span>
+    <span class="ruby-comment cmt">#if(@cache[query].nil? &amp;&amp; use_cache)</span>
+      <span class="ruby-identifier">connect</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-comment cmt">#connect to the database if needs be</span>
+
+      <span class="ruby-identifier">log</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">'sql_log.log'</span>, <span class="ruby-value str">'a'</span>)
+      <span class="ruby-identifier">log</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;To Execute: #{query}&quot;</span>
+      <span class="ruby-identifier">log</span>.<span class="ruby-identifier">close</span>
+      <span class="ruby-ivar">@result</span> = <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">query</span>(<span class="ruby-identifier">query</span>) <span class="ruby-comment cmt"># run query</span>
+      <span class="ruby-identifier">log</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">'sql_log.log'</span>, <span class="ruby-value str">'a'</span>)
+      <span class="ruby-identifier">log</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;After: #{@query}&quot;</span>
+      <span class="ruby-identifier">log</span>.<span class="ruby-identifier">close</span>
+      <span class="ruby-ivar">@cache</span>[<span class="ruby-identifier">query</span>] = <span class="ruby-ivar">@result</span> <span class="ruby-comment cmt"># save result to cache hash</span>
+
+    <span class="ruby-comment cmt">#else</span>
+      <span class="ruby-comment cmt">#@result = @cache[query]</span>
+    <span class="ruby-comment cmt">#end</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

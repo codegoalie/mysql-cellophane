@@ -1,0 +1,213 @@
+:css
+  pre { border:1px solid green; padding:1em;}
+%h1
+  Getting Started
+%P
+  MySQL Cellophane has attributes for the basic builing blocks of a SQL query.
+  %ul
+    %li 
+      table
+      %ul
+        %li specifies the table to operate on
+    %li 
+      id_field
+      %ul
+        %li specifies which column in the main condition (used with id)
+        %li 
+          is set to 1 by default to override the main condition (id must be set to 1 as well)
+    %li 
+      id
+      %ul
+        %li specifies a value for the main condition (used with field_id)
+        %li 
+          is set to 1 by default to override the main condition (id_field must be set to 1 as well)
+        %li
+          is escaped before being placed into query
+    %li 
+      extra_cond
+      %ul
+        %li Concatinated onto the end of the base query
+        %li IS NOT ESCAPED - use esc method to escape values before setting
+
+%p
+  MySQL Cellophane has methods for each basic SQL interaction:
+  %br
+  Each interaction method can optionally take a final hash argument. This hash can set any of 
+  the class attributes listed above. See the examples below for more information.
+  %ul
+    %li 
+      select
+      %ul
+        %li performs a select query
+    %li 
+      insert({hash})
+      %ul
+        %li 
+          requires a hash argument of symbol keys for column names and values for each column 
+          to be inserted
+    %li 
+      update
+      %ul
+        %li
+          requires a hash argument of symbol keys for column names and values for each column 
+          to be updated
+
+    %li 
+      delete
+      %ul
+        %li performs a delete query
+%hr
+%p
+  %h3 Examples
+  %h4 friends table
+  %table{:border => 1}
+    %thead
+      %th id
+      %th name
+      %th age
+    %tbody
+      %tr 
+        %td 1
+        %td Chris
+        %td 26
+      %tr 
+        %td 2
+        %td Hayley
+        %td 24
+      %tr 
+        %td 3
+        %td Bobby
+        %td 25
+  %h4 initialize
+  %pre
+    db = MySQLc.new {:user => 'mysql_user', :password => 'mysql_password', :database => 'database'}
+  %h4 select
+  get all rows
+  %pre
+    db.table = 'friends' 
+    result = db.select # SELECT * FROM friends WHERE 1=1
+    result.fetch_hash #=> { 'id' => 1, 'name' => 'Chris',  'age' => 26 }
+    result.fetch_hash #=> { 'id' => 2, 'name' => 'Hayley', 'age' => 24 }
+    result.fetch_hash #=> { 'id' => 3, 'name' => 'Bobby',  'age' => 25 }
+  get one friend
+  %pre
+    db.id_field = 'id'
+    db.id       = 1
+    result = db.select # SELECT * FROM friends WHERE id = 1
+    result.fetch_hash #=> { 'id' => 1, 'name' => 'Chris',  'age' => 26 }
+  Notice how we don't need to specify the table again because we did in the example above. One of the very 
+  nice features of MySQL Cellophane is that it keeps your values for you. 
+  %br
+  setting the options in-line
+  %pre
+    result = db.select({ :table => 'friends', :id_field => 'id', :id => 2}) # SELECT * FROM friends WHERE id = 2
+    result.fetch_row #=> [ 2, 'Hayley', 24 ]
+  specifying columns
+  %pre
+    db.field_list = 'name, age'
+    db.id = 1
+    db.id_field = 1
+    result = db.select # SELECT name, age FROM friends WHERE 1=1
+    result.fetch_row #=> [ 'Chris', 26 ]
+    result.fetch_row #=> [ 'Hayley', 24 ]
+  using extra_cond
+  %pre
+    db = MySQLc.new
+    db.table = 'friends'
+    db.field_list = 'name'
+    db.extra_cond = "name LIKE '%y' ORDER BY name"
+    result = db.select # SELECT * FROM friends WHERE 1=1 AND name LIKE '%y' ORDER BY name
+    result.fetch_row #=> [ 'Bobby' ]
+    result.fetch_row #=> [ 'Hayley' ]
+  %h4 insert
+  %pre
+    db.insert { :name => 'Katie', :age => 23 }
+  %h5 new friends table
+  %table{:border => 1}
+    %thead
+      %th id
+      %th name
+      %th age
+    %tbody
+      %tr 
+        %td 1
+        %td Chris
+        %td 26
+      %tr 
+        %td 2
+        %td Hayley
+        %td 24
+      %tr 
+        %td 3
+        %td Bobby
+        %td 25
+      %tr 
+        %td 4
+        %td Katie
+        %td 23
+  inline
+  %pre
+    new_id = db.insert { :name => 'Jared', :age => 26 }, { :table => 'friends' }
+    new_id  #=> 5
+  %h5 new new friends table
+  %table{:border => 1}
+    %thead
+      %th id
+      %th name
+      %th age
+    %tbody
+      %tr 
+        %td 1
+        %td Chris
+        %td 26
+      %tr 
+        %td 2
+        %td Hayley
+        %td 24
+      %tr 
+        %td 3
+        %td Bobby
+        %td 25
+      %tr 
+        %td 4
+        %td Katie
+        %td 23
+      %tr 
+        %td 5
+        %td Jared
+        %td 26
+  %h4 update
+  %pre
+    db.id_field = 'name'
+    db.id       = 'Katie'
+    db.update { :age => 22 }
+    db.select.fetch_hash #=> { 'id' => 4, 'name' => 'Katie',  'age' => 22 }
+  %pre
+    db.update { :age => 27 }, { :id => 26, :id_field => 'age', :table => 'friends' }
+    db.id = 27
+    db.select.fetch_hash #=> { 'id' => 1, 'name' => 'Chris',  'age' => 27 }
+    db.select.fetch_hash #=> { 'id' => 5, 'name' => 'Jared',  'age' => 27 }
+  %h4 delete
+  %pre
+    db = MySQLc.new
+    db.table = 'friends'
+    db.extra_cond = 'age < 25'
+    db.delete
+  %table{:border => 1}
+    %thead
+      %th id
+      %th name
+      %th age
+    %tbody
+      %tr 
+        %td 1
+        %td Chris
+        %td 26
+      %tr 
+        %td 3
+        %td Bobby
+        %td 25
+      %tr 
+        %td 5
+        %td Jared
+        %td 26

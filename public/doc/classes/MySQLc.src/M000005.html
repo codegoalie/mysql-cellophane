@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>set_attributes (MySQLc)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File mysql-cellophane.rb, line 103</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_attributes</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">vals</span>)
+    <span class="ruby-comment cmt"># when vals gets strung along from another *vals, the original </span>
+    <span class="ruby-comment cmt"># empty array becomes the first element of the new vals</span>
+    <span class="ruby-comment cmt"># so, we need to pull the first element off and work on that</span>
+    <span class="ruby-identifier">vals</span> = <span class="ruby-identifier">vals</span>[<span class="ruby-value">0</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">vals</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'Array'</span>
+
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">vals</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">vals</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;&quot;</span> 
+      <span class="ruby-ivar">@table</span>      = <span class="ruby-identifier">vals</span>[<span class="ruby-value">0</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">vals</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">1</span>
+      <span class="ruby-ivar">@field_list</span> = <span class="ruby-identifier">vals</span>[<span class="ruby-value">1</span>] <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">vals</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">2</span>
+      <span class="ruby-ivar">@id_field</span>   = <span class="ruby-identifier">vals</span>[<span class="ruby-value">2</span>] <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">vals</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">3</span>
+      <span class="ruby-ivar">@id</span>         = <span class="ruby-identifier">vals</span>[<span class="ruby-value">3</span>] <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">vals</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">4</span>
+      <span class="ruby-ivar">@extra_cond</span> = <span class="ruby-identifier">vals</span>[<span class="ruby-value">4</span>] <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">vals</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">5</span>
+    <span class="ruby-keyword kw">end</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

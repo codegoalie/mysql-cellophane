@@ -1,0 +1,104 @@
+MySQL Cellophane
+
+
+DATABASE INTERACTION FUNCTIONS 
+
+*** All interactive methods take an optional last parameter of a hash.
+    This hash has symbol keys of any/all of the following:
+    table, field_list, id_field, id, extra_cond
+
+count
+  Returns the count of all the records matching criteria.
+
+delete
+  Removed the given record(s).
+
+insert([values<hash(:col => val)>)
+  Inserts the given record. Will use pre-defined instance variables if none given.
+  Returns false if fails, otherwise returns inserted_id()
+
+inserted_id
+  Runs and returns 'LAST_INSERT_ID()'
+
+select
+    Return array of arrays representing the records matching the criteria. 
+    If only one row is found, will return a single array of the values.
+
+select_value
+    Returns the value of the first column in 'field list.' 
+    Usually used with only one column in 'field list' as the others are discarded.
+
+update_multi_values(values <hash (:col => val)>)
+    Updates the given record with the passed field => value array.
+
+update_value(value)
+    Updates the given record with the given value. 
+    Will use pre-defined instance variables if not passed.
+
+
+
+PUBLIC ATTRIBUTES
+
+extra_cond
+  any additional conditions, ordering, limiting for the query
+  THIS VALUE MUST BE ESCAPED BY THE USER. THERE IS NO INJECTION
+  PROTECTION DONE ON THIS VALUE.
+
+field_list
+  comma separated list of fileds on which to operate
+
+id
+  value for the id_field column
+
+id_field
+  the field (column) of the id value
+
+query
+  query which will be executed
+  this values is set to nil after each execution to prevent multiple
+  runs of the same query
+
+result
+  set after a query which returns values runs
+  is of type Mysql::Result
+
+table
+  table onto which execute query
+
+
+
+DATABASE RELATED LIBRARY FUNCTIONS
+
+esc(<string>)
+  returns the msql_real_escape_string of the passed string.
+
+extract_fields_from(<hash>)
+  returns comma separated string from the keys of the hash
+
+extract_values_from(<hash>)
+  returns a comma separated escaped and single quoted string of
+  the values of the hash
+
+quoted_string_from(<array> or <hash>)
+  Creates a single quoted mysql_real_escape_string'ed list of the values of the passed array
+
+
+
+INTERNALS
+
+build_query
+  Creates the internal query string for processing. Shouldn't even NEED to be used externally.
+
+connect
+  create the database server connection
+  separate method for lazy connection
+
+Constructor
+  Creates DB connection automatically chooses correct db based on file path
+
+execute
+  Runs the query
+
+set_attributes
+  Sets up to all the instance variables
+  Takes the optional vals param from the interactive methods

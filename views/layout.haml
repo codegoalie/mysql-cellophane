@@ -1,0 +1,19 @@
+!!! 5
+%html
+  %head
+    %title MySQL Cellophane - Ruby
+  %body
+    %h1 
+      %a{:href => '/' } MySQL Cellophane - Ruby Edition
+    #menu 
+      -#{:style => 'float:right;'}
+      %a{:href => 'rspec.html'} Proof
+      |
+      %a{:href => 'doc/index.html'} Docs
+      |
+      %a{:href => 'usage'} Use
+      |
+      %a{:href => 'https://github.com/chrismar035/School-Notes/tree/master/databases/mysql-cellophane'} Codez
+
+    #container
+      = yield

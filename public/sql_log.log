@@ -1,0 +1,118 @@
+Created New MySQLc instance
+
+
+
+
+Starting new test iteration
+Created New MySQLc instance
+Created New MySQLc instance
+Created New MySQLc instance
+Before: 
+To Execute: SELECT * FROM test_one WHERE 1 = '1'
+After: 
+Created New MySQLc instance
+Before: 
+To Execute: SELECT name FROM test_one WHERE 1 = '1'
+After: 
+Created New MySQLc instance
+Before: 
+To Execute: SELECT * FROM test_one WHERE 1 = '1' AND name = 'Chris'
+After: 
+Created New MySQLc instance
+Before: 
+To Execute: SELECT name, age FROM test_one WHERE id = '1' AND age = '26'
+After: 
+Created New MySQLc instance
+Before: 
+To Execute: SELECT * FROM test_one WHERE 1 = '1'
+After: 
+Before: INSERT INTO test_one (age,name) VALUES ('25','Bobby')
+To Execute: INSERT INTO test_one (age,name) VALUES ('25','Bobby')
+After: 
+Before: SELECT LAST_INSERT_ID();
+To Execute: SELECT LAST_INSERT_ID();
+After: 
+Before: SELECT * FROM test_one
+To Execute: SELECT * FROM test_one
+After: 
+Before: 
+To Execute: SELECT name, age FROM test_one WHERE id = '3'
+After: 
+Before: SELECT LAST_INSERT_ID();
+To Execute: SELECT LAST_INSERT_ID();
+After: 
+Before: 
+To Execute: SELECT id FROM test_one WHERE 1 = '1' AND 1=1 ORDER BY id DESC LIMIT 1
+After: 
+Created New MySQLc instance
+Before: 
+To Execute: SELECT * FROM test_one WHERE 1 = '1'
+After: 
+Before: UPDATE test_one SET name = 'Christopher' WHERE id = 1
+To Execute: UPDATE test_one SET name = 'Christopher' WHERE id = 1
+After: 
+Before: 
+To Execute: SELECT * FROM test_one WHERE 1 = '1'
+After: 
+Before: 
+To Execute: SELECT * FROM test_one WHERE 1 = '1'
+After: 
+Created New MySQLc instance
+Before: 
+To Execute: SELECT * FROM test_one WHERE 1 = '1'
+After: 
+Before: INSERT INTO test_one (age,name) VALUES ('30','Temp Guy')
+To Execute: INSERT INTO test_one (age,name) VALUES ('30','Temp Guy')
+After: 
+Before: SELECT LAST_INSERT_ID();
+To Execute: SELECT LAST_INSERT_ID();
+After: 
+Before: DELETE FROM test_one WHERE id = '4'
+To Execute: DELETE FROM test_one WHERE id = '4'
+After: 
+Before: 
+To Execute: SELECT * FROM test_one WHERE 1 = '1'
+After: 
+Before: INSERT INTO test_one (age,name) VALUES ('30','Temp Guy')
+To Execute: INSERT INTO test_one (age,name) VALUES ('30','Temp Guy')
+After: 
+Before: SELECT LAST_INSERT_ID();
+To Execute: SELECT LAST_INSERT_ID();
+After: 
+Before: INSERT INTO test_one (age,name) VALUES ('30','Temp Guy')
+To Execute: INSERT INTO test_one (age,name) VALUES ('30','Temp Guy')
+After: 
+Before: SELECT LAST_INSERT_ID();
+To Execute: SELECT LAST_INSERT_ID();
+After: 
+Before: 
+To Execute: SELECT * FROM test_one WHERE 1 = '1'
+After: 
+Before: DELETE FROM test_one WHERE name = 'Temp Guy'
+To Execute: DELETE FROM test_one WHERE name = 'Temp Guy'
+After: 
+Before: 
+To Execute: SELECT * FROM test_one WHERE 1 = '1'
+After: 
+Created New MySQLc instance
+Before: 
+To Execute: SELECT * FROM test_one WHERE name = 'Roger'
+After: 
+Before: 
+To Execute: SELECT * FROM test_one WHERE id = '1'
+After: 
+Before: INSERT INTO test_one (age,name) VALUES ('30','Temp Guy')
+To Execute: INSERT INTO test_one (age,name) VALUES ('30','Temp Guy')
+After: 
+Before: SELECT LAST_INSERT_ID();
+To Execute: SELECT LAST_INSERT_ID();
+After: 
+Before: INSERT INTO test_one (age,name) VALUES ('30','Temp Guy')
+To Execute: INSERT INTO test_one (age,name) VALUES ('30','Temp Guy')
+After: 
+Before: SELECT LAST_INSERT_ID();
+To Execute: SELECT LAST_INSERT_ID();
+After: 
+Before: 
+To Execute: SELECT * FROM test_one WHERE name = 'Temp Guy'
+After: 
