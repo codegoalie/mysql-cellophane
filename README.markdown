@@ -1,11 +1,21 @@
 MySQL-Cellphane
 ==============
-A very thin wrapper for mysql adapters. Useful for people who are comfortable with SQL, but 
-are tired of the annoyances of writing each query each time. MySQL-Cellophane helps by 
-abstracting away some of the repetative query building process. One of the main features 
-is to allow complete control over your queries.
+A very thin wrapper for mysql adapters. Useful for people who are comfortable 
+with SQL, but are tired of the annoyances of writing each query each time. 
+MySQL-Cellophane helps by abstracting away some of the repetative query 
+building process while allowing complete control over your queries.
 
-Requires mysql.rb (included in public folder above or from http://www.tmtm.org/en/ruby/mysql/)
+MySQL-Cellophane aims to fill the gap between hand typing each query and a 
+full ORM by streamlining the creation of db connections, setting smart defaults, 
+easily running multiple, similar queries, returning intelligent responses, and 
+avoiding SQL injection.
+
+Requires the mysql gem 
+
+    gem install mysql
+
+> there is an old version mysql.rb included in public folder above or 
+> from http://www.tmtm.org/en/ruby/mysql/
 
 Getting Started
 ---------------
