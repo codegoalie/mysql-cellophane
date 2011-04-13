@@ -10,6 +10,9 @@
 class MySQLc
   #require 'rubygems'
   require 'mysql'
+
+  # use this line instead of above to use a local version of mysql library
+  #require "#{File.dirname(__FILE__)}/mysql"
   
   attr_accessor :table, :field_list, :id_field, :id, :extra_cond, :query
   attr_reader :result
@@ -18,9 +21,9 @@ class MySQLc
   #
   # can setup connection, but does not create connection
   def initialize(options = {})
-    log = File.new('sql_log.log', 'a')
-    log.puts "Created New MySQLc instance"
-    log.close
+    if options[:log]
+      File.new('sql_log.log', 'a').puts("Created New MySQLc instance").close
+    end
 
     options[:host]      ||= 'localhost'
     options[:user]      ||= 'root'
@@ -29,6 +32,7 @@ class MySQLc
     options[:port]      ||= nil
     options[:socket]    ||= nil
     options[:flag]      ||= nil
+    options[:log]       ||= false
 
     @options = {}
     @options.merge!(options)
@@ -37,6 +41,8 @@ class MySQLc
     @id_field   = 1
     @id         = 1
     @cache      = {}
+
+    log("Created New MySQLc instance") if @options[:log]
   end
 
   # takes hash of connection ooptions, has default also
@@ -56,9 +62,8 @@ class MySQLc
   #
   # saves result in @result
   def execute
-    log = File.new('sql_log.log', 'a')
-    log.puts "Before: #{@query}"
-    log.close
+    log("Before: #{@query}") if @options[:log]
+
     build_query if(@query.nil?) 
 
     query = @query # keep local copy of query string
@@ -68,13 +73,12 @@ class MySQLc
     #if(@cache[query].nil? && use_cache)
       connect if @db.nil? #connect to the database if needs be
 
-      log = File.new('sql_log.log', 'a')
-      log.puts "To Execute: #{query}"
-      log.close
+      log("To Execute: #{query}") if @options[:log]
+
       @result = @db.query(query) # run query
-      log = File.new('sql_log.log', 'a')
-      log.puts "After: #{@query}"
-      log.close
+
+      log("After: #{query}") if @options[:log]
+
       @cache[query] = @result # save result to cache hash
 
     #else
@@ -253,6 +257,13 @@ class MySQLc
     connect if @db.nil? #connect to the database if needs be
 
     @db.quote(raw_string.to_s)
+  end
+
+  private
+
+  # writes a log message to the log file
+  def log message
+    File.new('sql_log.log', 'a').puts(message).close
   end
 
 end
